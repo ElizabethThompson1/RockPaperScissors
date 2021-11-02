@@ -1,0 +1,20 @@
+{
+  "name": "rockpaperscissors",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissors Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElizabethThompson1/RockPaperScissors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElizabethThompson1/RockPaperScissors/issues"
+  },
+  "homepage": "https://github.com/ElizabethThompson1/RockPaperScissors#readme"
+}
