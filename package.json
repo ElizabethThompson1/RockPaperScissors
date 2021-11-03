@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/ElizabethThompson1/RockPaperScissors/issues"
   },
-  "homepage": "https://github.com/ElizabethThompson1/RockPaperScissors#readme"
+  "homepage": "https://github.com/ElizabethThompson1/RockPaperScissors#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }

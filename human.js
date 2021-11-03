@@ -1,14 +1,13 @@
 "use strict"
+
+
 class People{
     constructor(name){
         this.name = name;
-        this.gesture = [];
+        this.gesture = " Scissors","Paper" ,"Rock" ,"Lizard" ,"Spock";
     }
-    addgesture(){
-        this.gesture.push* (" Scissors","Paper" ,"Rock" ,"Lizard" ,"Spock");
-    }
-
+ 
+    
 }
-console.log (People)
 
 module.exports = People;
