@@ -1,21 +1,16 @@
 "use strict"
-let People = require("./human.js");
-const prompt = require ('prompt-sync')();
 
-
-
-
-class Player extends People{
-    constructor(name,){
-        super(name);
-        this.playerOne = new (People)
-        this.playerTwo = new (People)
-        this.score ="3"
-        this.pointsMin= "1"
+class Player{
+    constructor(name){
+        this.name = name;
+        this.gestures = ["Scissors","Paper" ,"Rock" ,"Lizard" ,"Spock"];
+        this.score = 0
+        this.gesture ;
     }
-    people(opposingPlayer){
-        opposingPlayer.score = opposingPlayer.score - this.pointsMin
+ 
+    chooseGesture(){
+
     }
-}  
+}
 
-
+module.exports = Player;
