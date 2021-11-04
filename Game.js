@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")
+let prompt = require("prompt-sync")()
 const AI = require("./AI")
 const Player = require ("./Player")
 const Human = require ("./Human")
@@ -8,17 +8,20 @@ class Game {
     constructor(){
 
     }
-    
+
     PickWhoToPlay(){
         console.log("Who would you like to play 1 or 2? 1.Human or 2.AI?")
-        let QuestionPickAplayer = prompt();
-        if (QuestionPickAplayer === "1"){
-            this.humanVsHuman()
-        }
-        else  if (QuestionPickAplayer ==="2"){
-             aiVsHuman()
-        }// create else statrment to go back to questionpickplayer
+        let QuestionPickAplayer =prompt();
+            if (QuestionPickAplayer === "1"){
+                this.humanVsHuman()
+            }
+            else  if (QuestionPickAplayer ==="2"){
+                this.aiVsHuman();
+            }// create else statrment to go back to questionpickplayer
+        
     }
+    
+    
     aiVsHuman(){
         this.playerOne = new Human ("Player")
         this.playerTwo = new AI ("AI")
@@ -64,7 +67,7 @@ class Game {
             }
         
         }
-        else if (htis.gesture === "Paper"){
+        else if (this.gesture === "Paper"){
             if(this.gesture === "Rock"){
                 this.Player.score++
             }
