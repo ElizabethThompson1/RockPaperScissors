@@ -5,12 +5,13 @@ class Player{
         this.name = name;
         this.gestures = ["Scissors","Paper" ,"Rock" ,"Lizard" ,"Spock"];
         this.score = 0
-        this.gesture ;
+        this.gesture  ;
     }
  
     chooseGesture(){
 
     }
+
 }
 
 module.exports = Player;

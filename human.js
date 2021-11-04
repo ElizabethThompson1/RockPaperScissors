@@ -1,5 +1,5 @@
 "use strict"
-const prompt = require("prompt-sync");
+const prompt = require("prompt-sync")();
 const Player = require("./Player");
 
 
@@ -8,7 +8,7 @@ class Human extends Player{
     constructor(name,){
         super(name);
         
-       
+        
     }
 
     displayGestureOptions(){
@@ -17,12 +17,20 @@ class Human extends Player{
   
 
     chooseGesture(){
-        let questionOne = prompt("choose a gesture. Enter 1,2,3,4, or 5")
-        console.log (this.slectedGesture = questionOne)
+        console.log("choose a gesture.")
+       this.gesture = prompt()
+        
     
 
     }
-}  
+    runHuman(){
+    this.displayGestureOptions(); 
+    this.chooseGesture();
+    }
+}
+
+ 
+
 
 
 module.exports = Human;

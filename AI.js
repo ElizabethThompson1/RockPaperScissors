@@ -15,6 +15,7 @@ class AI extends Player{
     this.gesture=this.gestures [Math.floor(Math.random()*this.gestures.length)];
     }
     
+    
 }  
 
 module.exports=AI;
