@@ -34,16 +34,27 @@ class Game {
         
     } 
     pointsForPlayer(){
-        let i = this.playerOne
-        let s = this.playerTwo
-        while(i <= 2 || s <= 2 );
-            i++
-            s++
-            this.playerOne.chooseGesture();
-            this.playerTwo.chooseGesture();
+        while(this.playerOne.score + this.playerTwo.score <= 2 ){
+            this.playerOne.chooseGesture(this.playerOne.name);
+            this.playerTwo.chooseGesture(this.playerTwo.name);
             this.choosesWhoWins();
-            console.log(this.pointsForPlayer())
     }
+    this.theWinnerIs()
+    
+    
+}
+theWinnerIs(){
+    if(this.playerOne.score > this.playerTwo.score){
+        console.log("Player one is the Champion!")
+    }
+    else if(this.playerTwo.score >this.playerOne.score){
+        console.log("Player two is the Champion!")
+    }
+    else{
+        console.log("That sucks it's a tie!")
+    }
+    
+}
     // ake a new function to add points where console.log is 
     choosesWhoWins(){
         if (this.playerOne.gesture ==="Rock"){
@@ -52,9 +63,11 @@ class Game {
             }
             else if (this.playerTwo.gesture ==="Paper" || this.playerTwo.gesture === "Spock") {
                 this.playerTwo.score++
+            console.log("Player Two won!")
             }
             else{
                 this.playerOne.score++
+           console.log("Player One won!")
             }
         }
         else if (this.playerOne.gesture === "Scissors" ){
@@ -63,9 +76,11 @@ class Game {
             }
             else if (this.playerTwo.gesture ==="Rock" || this.playerTwo.gesture ==="Spock"){
                 this.playerTwo.score++
+            console.log("Player two won!")
             }
             else {
                 this.playerOne.score++
+            console.log("Player one won!")
             }
         
         }
@@ -75,9 +90,11 @@ class Game {
             }
             else if (this.playerTwo.gesture === "Scissors" || this.playerTwo.gesture ==="Lizard"){ 
                 this.playerTwo.score++
+            console.log("Player two won!")
             }
             else {
                 this.playerOne.score++
+           console.log("Player One won!")
             }
         }
         else if (this.playerOne.gesture === "Lizard"){
@@ -86,9 +103,11 @@ class Game {
             }
             else if(this.playerTwo.gesture === "Rock" || this.playerTwo.gesture === "Scissors") {
                 this.playerTwo.score++
+            console.log("Player two won!")
             }
             else{
                 this.playerOne.score++
+           console.log("Player one won!")
             }
         }
         else if (this.playerOne.gesture === "Spock"){
@@ -97,9 +116,11 @@ class Game {
             }
             else if (this.playerTwo.gesture === "Paper" || this.playerTwo.gesture === "Lizard") {
                 this.playerTwo.score++
+            console.log("Player two won!")
             }
             else {
                 this.playerOne.score++
+            console.log("Player one won!")
             }
 
 

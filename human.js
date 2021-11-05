@@ -2,8 +2,6 @@
 const prompt = require("prompt-sync")();
 const Player = require("./Player");
 
-
-
 class Human extends Player{
     constructor(name,){
         super(name);
@@ -16,8 +14,8 @@ class Human extends Player{
     }
   
 
-    chooseGesture(){
-        console.log("choose a gesture.")
+    chooseGesture(playerName){
+        console.log(playerName+" choose a gesture.")
        this.gesture = prompt()
         
     
