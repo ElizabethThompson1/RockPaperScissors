@@ -36,7 +36,7 @@ class Game {
     pointsForPlayer(){
         let i = this.playerOne
         let s = this.playerTwo
-        while(i <= 3 || s <= 3 );
+        while(i <= 2 || s <= 2 );
             i++
             s++
             this.playerOne.chooseGesture();
