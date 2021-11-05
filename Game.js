@@ -35,6 +35,7 @@ class Game {
     } 
     pointsForPlayer(){
         while(this.playerOne.score + this.playerTwo.score <= 2 ){
+            this.playerOne.displayGestureOptions();
             this.playerOne.chooseGesture(this.playerOne.name);
             this.playerTwo.chooseGesture(this.playerTwo.name);
             this.choosesWhoWins();
