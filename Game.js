@@ -34,30 +34,34 @@ class Game {
         
     } 
     pointsForPlayer(){
-        while(this.playerOne<= 2 || this.playerTwo <= 2 ); 
-            this.playerOne.chooseGesture()
-            this.playerTwo.chooseGesture()
-        
-
+        let i = this.playerOne
+        let s = this.playerTwo
+        while(i <= 3 || s <= 3 );
+            i++
+            s++
+            this.playerOne.chooseGesture();
+            this.playerTwo.chooseGesture();
+            this.choosesWhoWins();
+            console.log(this.pointsForPlayer())
     }
     // ake a new function to add points where console.log is 
     choosesWhoWins(){
         if (this.playerOne.gesture ==="Rock"){
-            if (this.playerTwo.gesture === this.playerOne){
+            if (this.playerTwo.gesture === this.playerOne.gesture){
                 console.log("it's  TIE!")
             }
-            else if (this.playerTwo ==="Paper" || this.playerTwo === "Spock") {
+            else if (this.playerTwo.gesture ==="Paper" || this.playerTwo.gesture === "Spock") {
                 this.playerTwo.score++
             }
             else{
                 this.playerOne.score++
             }
         }
-        else if (this.playerOne === "Scissors" ){
-            if (this.playerOne === this.playerTwo){
+        else if (this.playerOne.gesture === "Scissors" ){
+            if (this.playerOne.gesture === this.playerTwo.gesture){
                 console.log("it's  TIE!")
             }
-            else if (this.playerTwo ==="Rock" || this.playerTwo ==="Spock"){
+            else if (this.playerTwo.gesture ==="Rock" || this.playerTwo.gesture ==="Spock"){
                 this.playerTwo.score++
             }
             else {
@@ -65,33 +69,33 @@ class Game {
             }
         
         }
-        else if (this.playerOne === "Paper"){
-            if (this.playerOne === this.playerTwo){
+        else if (this.playerOne.gesture === "Paper"){
+            if (this.playerOne.gesture === this.playerTwo.gesture){
                 console.log("it's  TIE!")
             }
-            else if (this.playerTwo === "Scissors" || this.playerTwo ==="Lizard"){ 
+            else if (this.playerTwo.gesture === "Scissors" || this.playerTwo.gesture ==="Lizard"){ 
                 this.playerTwo.score++
             }
             else {
                 this.playerOne.score++
             }
         }
-        else if (this.playerOne === "Lizard"){
-            if (this.playerTwo === this.playerOne){
+        else if (this.playerOne.gesture === "Lizard"){
+            if (this.playerTwo.gesture === this.playerOne.gesture){
                 console.log("it's  TIE!")
             }
-            else if(this.playerTwo === "Rock" || this.playerTwo === "Scissors") {
+            else if(this.playerTwo.gesture === "Rock" || this.playerTwo.gesture === "Scissors") {
                 this.playerTwo.score++
             }
             else{
                 this.playerOne.score++
             }
         }
-        else if (this.playerOne === "Spock"){
-            if (this.playerTwo === this.playerOne){
+        else if (this.playerOne.gesture === "Spock"){
+            if (this.playerTwo.gesture === this.playerOne.gesture){
                 console.log ("It's a TIE!")
             }
-            else if (this.playerTwo === "Paper" || this.playerTwo === "Lizard") {
+            else if (this.playerTwo.gesture === "Paper" || this.playerTwo.gesture === "Lizard") {
                 this.playerTwo.score++
             }
             else {
@@ -112,7 +116,7 @@ class Game {
     runGame(){
         this.PickWhoToPlay(); 
         this.pointsForPlayer();
-        this.choosesWhoWins();
+        
       
     }
 }

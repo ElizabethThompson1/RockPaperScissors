@@ -23,10 +23,7 @@ class Human extends Player{
     
 
     }
-    runHuman(){
-    this.displayGestureOptions(); 
-    this.chooseGesture();
-    }
+
 }
 
  
